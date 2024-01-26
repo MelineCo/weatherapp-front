@@ -5,7 +5,7 @@ document.querySelector('#register').addEventListener('click', function () {
         email: document.querySelector("#registerEmail").value,
         password: document.querySelector("#registerPassword").value
     }
-    fetch('https://weatherappback-omega.vercel.app/signup', {
+    fetch('https://weatherappback-omega.vercel.app/users/signup', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -23,7 +23,7 @@ document.querySelector('#connection').addEventListener('click', function () {
         email: document.querySelector("#connectionEmail").value,
         password: document.querySelector("#connectionPassword").value,
     }
-    fetch('https://weatherappback-omega.vercel.app/signin', {
+    fetch('https://weatherappback-omega.vercel.app/users/signin', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
