@@ -5,7 +5,7 @@ document.querySelector('#register').addEventListener('click', function () {
         email: document.querySelector("#registerEmail").value,
         password: document.querySelector("#registerPassword").value
     }
-    fetch('http://localhost:3000/users/signup', {
+    fetch('https://weatherapp-back-theta.vercel.app/signup', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -23,7 +23,7 @@ document.querySelector('#connection').addEventListener('click', function () {
         email: document.querySelector("#connectionEmail").value,
         password: document.querySelector("#connectionPassword").value,
     }
-    fetch('http://localhost:3000/users/signin', {
+    fetch('https://weatherapp-back-theta.vercel.app/signin', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
