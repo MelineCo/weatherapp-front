@@ -1,4 +1,6 @@
-fetch('https://weatherappback-omega.vercel.app/weather')
+fetch('https://weatherappback-omega.vercel.app/weather', {
+	method: 'GET',
+	headers: { 'Content-Type': 'application/json' } })
 	.then(response => response.json())
 	.then(data => {
 		if (data.weather) {
@@ -24,7 +26,9 @@ fetch('https://weatherappback-omega.vercel.app/weather')
 function updateDeleteCityEventListener() {
 	for (let i = 0; i < document.querySelectorAll('.deleteCity').length; i++) {
 		document.querySelectorAll('.deleteCity')[i].addEventListener('click', function () {
-			fetch(`https://weatherappback-omega.vercel.app/weather/${this.id}`, { method: 'DELETE' })
+			fetch(`https://weatherappback-omega.vercel.app/weather/${this.id}`, {
+				method: 'DELETE',
+				headers: { 'Content-Type': 'application/json' } })
 				.then(response => response.json())
 				.then(data => {
 					if (data.result) {
